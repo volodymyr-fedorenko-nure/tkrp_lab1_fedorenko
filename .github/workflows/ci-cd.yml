@@ -20,11 +20,13 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./MyApi.sln
+
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build ./MyApi.sln --no-restore
+
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./MyApi.sln --no-build --verbosity normal
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
