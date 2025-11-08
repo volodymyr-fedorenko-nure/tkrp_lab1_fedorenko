@@ -35,6 +35,6 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         context: .
-        file: ./src/TKRPApi/Web/Dockerfile
+        file: ./src/TKRPApi/Dockerfile
         push: false
         tags: my-api:latest
