@@ -10,6 +10,7 @@ WORKDIR /src
 
 COPY ["src/TKRPApi/TKRPApi.sln", "TKRPApi/"]
 COPY ["src/TKRPApi/Web/Web.csproj", "TKRPApi/Web/"]
+COPY ["src/TKRPApi/Tests/Tests.csproj", "TKRPApi/Tests/"]
 
 RUN dotnet restore "TKRPApi/TKRPApi.sln"
 
