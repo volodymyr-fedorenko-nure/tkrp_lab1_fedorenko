@@ -20,13 +20,13 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore ./MyApi.sln
+      run: dotnet restore ./src/TKRPApi/TKRPApi.sln
 
     - name: Build
-      run: dotnet build ./MyApi.sln --no-restore
+      run: dotnet build ./src/TKRPApi/TKRPApi.sln --no-restore
 
     - name: Test
-      run: dotnet test ./MyApi.sln --no-build --verbosity normal
+      run: dotnet test ./src/TKRPApi/TKRPApi.sln --no-build --verbosity normal
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
